@@ -24,7 +24,7 @@ X = pickle.load(open("X.pickle", "rb"))
 y = pickle.load(open("y.pickle", "rb"))
 
 
-#this is from keras applications
+#this is from keras applications with small modification
 def identity_block(X, f, filters, stage, block):
     conv_name_base = 'res' + str(stage) + block + '_branch'
     bn_name_base = 'bn' + str(stage) + block + '_branch'
@@ -49,7 +49,7 @@ def identity_block(X, f, filters, stage, block):
 
     return X
 
-#this is from keras application
+#this is from keras application with small modification
 def convolutional_block(X, f, filters, stage, block, s = 2):
     
     conv_name_base = 'res' + str(stage) + block + '_branch'
@@ -79,7 +79,7 @@ def convolutional_block(X, f, filters, stage, block, s = 2):
     
     return X
 
-#this is from keras application
+#this is from keras application with small modification
 def ResNet50(input_shape = (64, 64, 3), classes = 3):   
     X_input = Input(input_shape)
 
