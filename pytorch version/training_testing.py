@@ -20,7 +20,6 @@ import pickle
 from torch.utils.data import DataLoader
 from dataloader import dataset
 from preprocessing import transform
-from model_init import init_model
 
 
 if torch.cuda.is_available():
